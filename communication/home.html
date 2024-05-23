@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linking to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" title="style 1" media="screen, tv, projection, handheld, print" />
+
+    <!-- Defining character encoding -->
+    <meta charset="utf-8">
+    <!-- Setting viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+</head>
+<style type="text/css">
+/* Resetting default margins and padding */
+ul, h1, body, html { 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    display: flex; /* Uses flexbox to manage the layout */
+    flex-direction: column;
+    font-family: Aptos (Body);
+    font-size: 17px;
+    color: white;
+    background-color: black;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: orange;
+}
+
+nav {
+    background-color: dimgray;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Enhanced style for active page */
+    background-color: orange;
+    font-weight: bold; /* Make active nav item bold */
+    border-radius: 5px; /* Rounded corners for active nav item */
+}
+
+.dropdown-contents {
+    display: inline-block;
+    position: absolute;
+    background-color: darkcyan;
+    min-width: 160px; /* Ensure dropdown has a minimum width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.dropdown-contents a {
+    color: white; /* Ensure text color is white */
+    padding: 12px 16px; /* Add padding to dropdown items */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make each link a block element */
+}
+
+.dropdown-contents a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: black; /* Black text color on hover */
+}
+
+.dropdown:hover .dropdown-contents {
+    display: flex; /* Use flex to ensure vertical layout */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute; /* Changed from fixed to absolute */
+    bottom: 0;
+    width: 100%;
+}
+
+.toolbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .toolbar img {
+        display: block;
+    }
+    
+    .footer {
+        position: relative; /* Adjusted to position relative in small screens */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+        background-color: dimgray;
+    }
+}
+</style>
+
+<body>
+    <header>
+
+        <div class="toolbar">
+            <img src="./Images/ab.jpg" width="90" height="60" alt="Logo">
+            <div class="search-bar">
+                <form class="d-flex" role="search" action="search.php">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contactus.html">CONTACT</a></li>
+                <li class="dropdown">
+                    <a href="#">WORKSHOPS TABLES</a>
+                    <ul class="dropdown-contents">
+                        <a href="./Instructors.php">Instructors</a>
+                        <a href="./Workshops.php">Workshops</a>
+                        <a href="./Attendees.php">Attendees</a>
+                        <a href="./Resources.php">Communication Skills Resources</a>
+                        <a href="./Feedback.php">Feedback</a>
+                        <a href="./Schedule.php">Workshop Schedule</a>
+                        <a href="./Registration.php">Registration</a>
+                        <a href="./Categories.php">Communication Skills Categories</a>
+                        <a href="./Certificates.php">Certificates</a>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">SETTINGS</a>
+                    <div class="dropdown-contents">
+                        <a href="./login.html">Login</a>
+                        <a href="./logout.php">Logout</a>
+                        <a href="./register.html">Register</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+            <h2>Welcome to Our Home</h2>
+            <p>
+                Greetings,<br> and a warm welcome to the <strong>Communication Skills Workshops Platform<br></strong>!
+                We are thrilled to have you explore our innovative platform designed<br> to streamline workshops and enhance efficiency within<br> the communication skills industry.
+                Dive into a world where management meets<br> creativity, ensuring your projects transition smoothly from concept to<br> completion.
+                Enjoy your journey with us as we embark on<br> a mission to transform workshop management.
+                Your adventure in<br> optimizing workshop excellence starts here!
+            </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Communication Skills Workshops Platform. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
